@@ -1,0 +1,1309 @@
+Analysis & Synthesis report for MIPS_Completo_DBG
+Sun Nov 21 11:43:44 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg
+ 12. Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_pc_branch
+ 13. Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_pc_jump
+ 14. Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_write_address
+ 15. Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_write_data
+ 16. Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_alu_src
+ 17. Port Connectivity Checks: "MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_pc_jump"
+ 18. Port Connectivity Checks: "MIPS:mips_computer|Datapath:Datapath_mips|Adder:add_pc_default"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 21 11:43:44 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; MIPS_Completo_DBG                           ;
+; Top-level Entity Name              ; MIPS_Completo_DBG                           ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 4,386                                       ;
+;     Total combinational functions  ; 2,146                                       ;
+;     Dedicated logic registers      ; 2,334                                       ;
+; Total registers                    ; 2334                                        ;
+; Total pins                         ; 277                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; MIPS_Completo_DBG  ; MIPS_Completo_DBG  ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
+;     Processor 7            ;   0.1%      ;
+;     Processor 8            ;   0.1%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+; mips_completo_dbg.v              ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v ;         ;
+; mips.v                           ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/mips.v              ;         ;
+; controller.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/controller.v        ;         ;
+; maindecoder.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/maindecoder.v       ;         ;
+; aludecoder.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/aludecoder.v        ;         ;
+; datapath.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/datapath.v          ;         ;
+; registerff.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/registerff.v        ;         ;
+; adder.v                          ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/adder.v             ;         ;
+; signextension.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/signextension.v     ;         ;
+; shiftleft2.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/shiftleft2.v        ;         ;
+; mux2.v                           ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/mux2.v              ;         ;
+; registerfile.v                   ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/registerfile.v      ;         ;
+; alu.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/alu.v               ;         ;
+; instructionmemory.v              ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/instructionmemory.v ;         ;
+; memfile.dat                      ; yes             ; Auto-Found Unspecified File  ; C:/Projetos/MIPS_Completo_DBG/memfile.dat         ;         ;
+; datamemory.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Projetos/MIPS_Completo_DBG/datamemory.v        ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4,386     ;
+;                                             ;           ;
+; Total combinational functions               ; 2146      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1959      ;
+;     -- 3 input functions                    ; 149       ;
+;     -- <=2 input functions                  ; 38        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 2056      ;
+;     -- arithmetic mode                      ; 90        ;
+;                                             ;           ;
+; Total registers                             ; 2334      ;
+;     -- Dedicated logic registers            ; 2334      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 277       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 2334      ;
+; Total fan-out                               ; 15930     ;
+; Average fan-out                             ; 3.16      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                        ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Entity Name       ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+-------------------+--------------+
+; |MIPS_Completo_DBG                  ; 2146 (0)            ; 2334 (0)                  ; 0           ; 0            ; 0       ; 0         ; 277  ; 0            ; |MIPS_Completo_DBG                                                                     ; MIPS_Completo_DBG ; work         ;
+;    |DataMemory:data_mem|            ; 1424 (1424)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|DataMemory:data_mem                                                 ; DataMemory        ; work         ;
+;    |InstructionMemory:inst_mem|     ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|InstructionMemory:inst_mem                                          ; InstructionMemory ; work         ;
+;    |MIPS:mips_computer|             ; 675 (0)             ; 286 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer                                                  ; MIPS              ; work         ;
+;       |Controller:ControlUnit_mips| ; 32 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Controller:ControlUnit_mips                      ; Controller        ; work         ;
+;          |ALUDecoder:ADecoder|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Controller:ControlUnit_mips|ALUDecoder:ADecoder  ; ALUDecoder        ; work         ;
+;          |MainDecoder:MDecoder|     ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Controller:ControlUnit_mips|MainDecoder:MDecoder ; MainDecoder       ; work         ;
+;       |Datapath:Datapath_mips|      ; 643 (0)             ; 286 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips                           ; Datapath          ; work         ;
+;          |ALU:alu_mips|             ; 129 (129)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|ALU:alu_mips              ; ALU               ; work         ;
+;          |Adder:add_pc_branch|      ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|Adder:add_pc_branch       ; Adder             ; work         ;
+;          |Adder:add_pc_default|     ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|Adder:add_pc_default      ; Adder             ; work         ;
+;          |MUX2:mux_alu_src|         ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_alu_src          ; MUX2              ; work         ;
+;          |MUX2:mux_pc_jump|         ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_pc_jump          ; MUX2              ; work         ;
+;          |MUX2:mux_write_address|   ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_write_address    ; MUX2              ; work         ;
+;          |MUX2:mux_write_data|      ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_write_data       ; MUX2              ; work         ;
+;          |RegisterFF:pcreg|         ; 32 (32)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg          ; RegisterFF        ; work         ;
+;          |RegisterFile:RF|          ; 338 (338)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF           ; RegisterFile      ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                         ;
++------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
+; Register name                                                                ; Reason for Removal                                                          ;
++------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg|q[0]              ; Merged with MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg|q[1] ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg|q[1]              ; Stuck at GND due to stuck port data_in                                      ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~256  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~257  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~258  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~259  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~260  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~261  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~262  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~263  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~264  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~265  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~266  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~267  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~268  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~269  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~270  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~271  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~272  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~273  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~274  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~275  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~276  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~277  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~278  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~279  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~280  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~281  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~282  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~283  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~284  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~285  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~286  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~287  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~288  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~289  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~290  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~291  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~292  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~293  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~294  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~295  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~296  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~297  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~298  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~299  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~300  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~301  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~302  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~303  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~304  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~305  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~306  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~307  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~308  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~309  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~310  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~311  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~312  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~313  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~314  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~315  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~316  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~317  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~318  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~319  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~320  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~321  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~322  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~323  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~324  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~325  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~326  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~327  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~328  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~329  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~330  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~331  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~332  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~333  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~334  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~335  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~336  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~337  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~338  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~339  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~340  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~341  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~342  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~343  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~344  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~345  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~346  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~347  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~348  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~349  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~350  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~351  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~352  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~353  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~354  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~355  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~356  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~357  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~358  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~359  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~360  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~361  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~362  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~363  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~364  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~365  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~366  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~367  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~368  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~369  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~370  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~371  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~372  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~373  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~374  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~375  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~376  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~377  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~378  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~379  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~380  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~381  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~382  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~383  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~384  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~385  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~386  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~387  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~388  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~389  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~390  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~391  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~392  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~393  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~394  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~395  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~396  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~397  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~398  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~399  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~400  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~401  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~402  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~403  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~404  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~405  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~406  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~407  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~408  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~409  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~410  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~411  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~412  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~413  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~414  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~415  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~416  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~417  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~418  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~419  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~420  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~421  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~422  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~423  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~424  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~425  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~426  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~427  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~428  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~429  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~430  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~431  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~432  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~433  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~434  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~435  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~436  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~437  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~438  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~439  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~440  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~441  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~442  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~443  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~444  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~445  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~446  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~447  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~448  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~449  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~450  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~451  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~452  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~453  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~454  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~455  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~456  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~457  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~458  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~459  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~460  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~461  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~462  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~463  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~464  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~465  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~466  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~467  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~468  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~469  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~470  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~471  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~472  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~473  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~474  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~475  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~476  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~477  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~478  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~479  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~480  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~481  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~482  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~483  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~484  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~485  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~486  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~487  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~488  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~489  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~490  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~491  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~492  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~493  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~494  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~495  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~496  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~497  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~498  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~499  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~500  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~501  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~502  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~503  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~504  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~505  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~506  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~507  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~508  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~509  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~510  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~511  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~512  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~513  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~514  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~515  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~516  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~517  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~518  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~519  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~520  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~521  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~522  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~523  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~524  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~525  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~526  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~527  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~528  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~529  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~530  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~531  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~532  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~533  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~534  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~535  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~536  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~537  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~538  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~539  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~540  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~541  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~542  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~543  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~544  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~545  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~546  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~547  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~548  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~549  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~550  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~551  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~552  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~553  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~554  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~555  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~556  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~557  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~558  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~559  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~560  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~561  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~562  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~563  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~564  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~565  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~566  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~567  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~568  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~569  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~570  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~571  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~572  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~573  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~574  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~575  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~576  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~577  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~578  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~579  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~580  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~581  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~582  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~583  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~584  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~585  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~586  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~587  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~588  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~589  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~590  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~591  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~592  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~593  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~594  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~595  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~596  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~597  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~598  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~599  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~600  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~601  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~602  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~603  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~604  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~605  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~606  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~607  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~608  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~609  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~610  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~611  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~612  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~613  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~614  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~615  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~616  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~617  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~618  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~619  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~620  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~621  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~622  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~623  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~624  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~625  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~626  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~627  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~628  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~629  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~630  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~631  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~632  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~633  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~634  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~635  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~636  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~637  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~638  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~639  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~640  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~641  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~642  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~643  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~644  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~645  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~646  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~647  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~648  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~649  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~650  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~651  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~652  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~653  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~654  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~655  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~656  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~657  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~658  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~659  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~660  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~661  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~662  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~663  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~664  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~665  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~666  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~667  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~668  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~669  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~670  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~671  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~672  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~673  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~674  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~675  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~676  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~677  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~678  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~679  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~680  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~681  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~682  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~683  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~684  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~685  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~686  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~687  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~688  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~689  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~690  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~691  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~692  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~693  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~694  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~695  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~696  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~697  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~698  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~699  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~700  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~701  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~702  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~703  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~704  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~705  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~706  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~707  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~708  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~709  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~710  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~711  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~712  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~713  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~714  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~715  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~716  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~717  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~718  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~719  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~720  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~721  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~722  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~723  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~724  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~725  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~726  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~727  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~728  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~729  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~730  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~731  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~732  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~733  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~734  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~735  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~736  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~737  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~738  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~739  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~740  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~741  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~742  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~743  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~744  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~745  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~746  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~747  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~748  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~749  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~750  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~751  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~752  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~753  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~754  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~755  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~756  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~757  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~758  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~759  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~760  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~761  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~762  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~763  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~764  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~765  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~766  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~767  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~768  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~769  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~770  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~771  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~772  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~773  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~774  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~775  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~776  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~777  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~778  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~779  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~780  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~781  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~782  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~783  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~784  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~785  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~786  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~787  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~788  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~789  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~790  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~791  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~792  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~793  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~794  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~795  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~796  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~797  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~798  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~799  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~800  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~801  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~802  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~803  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~804  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~805  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~806  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~807  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~808  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~809  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~810  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~811  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~812  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~813  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~814  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~815  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~816  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~817  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~818  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~819  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~820  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~821  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~822  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~823  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~824  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~825  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~826  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~827  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~828  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~829  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~830  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~831  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~832  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~833  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~834  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~835  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~836  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~837  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~838  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~839  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~840  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~841  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~842  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~843  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~844  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~845  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~846  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~847  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~848  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~849  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~850  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~851  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~852  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~853  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~854  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~855  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~856  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~857  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~858  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~859  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~860  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~861  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~862  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~863  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~864  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~865  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~866  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~867  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~868  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~869  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~870  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~871  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~872  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~873  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~874  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~875  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~876  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~877  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~878  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~879  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~880  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~881  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~882  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~883  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~884  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~885  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~886  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~887  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~888  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~889  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~890  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~891  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~892  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~893  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~894  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~895  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~896  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~897  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~898  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~899  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~900  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~901  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~902  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~903  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~904  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~905  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~906  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~907  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~908  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~909  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~910  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~911  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~912  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~913  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~914  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~915  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~916  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~917  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~918  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~919  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~920  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~921  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~922  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~923  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~924  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~925  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~926  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~927  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~928  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~929  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~930  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~931  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~932  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~933  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~934  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~935  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~936  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~937  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~938  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~939  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~940  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~941  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~942  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~943  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~944  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~945  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~946  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~947  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~948  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~949  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~950  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~951  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~952  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~953  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~954  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~955  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~956  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~957  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~958  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~959  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~960  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~961  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~962  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~963  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~964  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~965  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~966  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~967  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~968  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~969  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~970  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~971  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~972  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~973  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~974  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~975  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~976  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~977  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~978  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~979  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~980  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~981  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~982  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~983  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~984  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~985  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~986  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~987  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~988  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~989  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~990  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~991  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~992  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~993  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~994  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~995  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~996  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~997  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~998  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~999  ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1000 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1001 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1002 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1003 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1004 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1005 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1006 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1007 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1008 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1009 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1010 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1011 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1012 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1013 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1014 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1015 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1016 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1017 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1018 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1019 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1020 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1021 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1022 ; Lost fanout                                                                 ;
+; MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores~1023 ; Lost fanout                                                                 ;
+; Total Number of Removed Registers = 770                                      ;                                                                             ;
++------------------------------------------------------------------------------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2334  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 30    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2304  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg|q[22] ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg|q[15] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPS_Completo_DBG|MIPS:mips_computer|Datapath:Datapath_mips|ALU:alu_mips|Mux11     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_pc_branch ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_pc_jump ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_write_address ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; WIDTH          ; 5     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_write_data ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_alu_src ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_pc_jump" ;
++----------+-------+----------+----------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                  ;
++----------+-------+----------+----------------------------------------------------------+
+; d1[1..0] ; Input ; Info     ; Stuck at GND                                             ;
++----------+-------+----------+----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MIPS:mips_computer|Datapath:Datapath_mips|Adder:add_pc_default" ;
++----------+-------+----------+--------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                      ;
++----------+-------+----------+--------------------------------------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                                                 ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                                                 ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                                                 ;
++----------+-------+----------+--------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 277                         ;
+; cycloneiii_ff         ; 2334                        ;
+;     CLR               ; 14                          ;
+;     CLR SLD           ; 16                          ;
+;     ENA               ; 2304                        ;
+; cycloneiii_lcell_comb ; 2147                        ;
+;     arith             ; 90                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 60                          ;
+;     normal            ; 2057                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 89                          ;
+;         4 data inputs ; 1959                        ;
+;                       ;                             ;
+; Max LUT depth         ; 16.70                       ;
+; Average LUT depth     ; 9.98                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:10     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Nov 21 11:43:17 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Completo_DBG -c MIPS_Completo_DBG
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Warning (12125): Using design file mips_completo_dbg.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MIPS_Completo_DBG File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 14
+Info (12127): Elaborating entity "MIPS_Completo_DBG" for the top level hierarchy
+Warning (12125): Using design file mips.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MIPS File: C:/Projetos/MIPS_Completo_DBG/mips.v Line: 9
+Info (12128): Elaborating entity "MIPS" for hierarchy "MIPS:mips_computer" File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 57
+Warning (12125): Using design file controller.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Controller File: C:/Projetos/MIPS_Completo_DBG/controller.v Line: 6
+Info (12128): Elaborating entity "Controller" for hierarchy "MIPS:mips_computer|Controller:ControlUnit_mips" File: C:/Projetos/MIPS_Completo_DBG/mips.v Line: 49
+Warning (12125): Using design file maindecoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MainDecoder File: C:/Projetos/MIPS_Completo_DBG/maindecoder.v Line: 6
+Info (12128): Elaborating entity "MainDecoder" for hierarchy "MIPS:mips_computer|Controller:ControlUnit_mips|MainDecoder:MDecoder" File: C:/Projetos/MIPS_Completo_DBG/controller.v Line: 29
+Warning (12125): Using design file aludecoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALUDecoder File: C:/Projetos/MIPS_Completo_DBG/aludecoder.v Line: 5
+Info (12128): Elaborating entity "ALUDecoder" for hierarchy "MIPS:mips_computer|Controller:ControlUnit_mips|ALUDecoder:ADecoder" File: C:/Projetos/MIPS_Completo_DBG/controller.v Line: 34
+Warning (12125): Using design file datapath.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Datapath File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 13
+Info (12128): Elaborating entity "Datapath" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips" File: C:/Projetos/MIPS_Completo_DBG/mips.v Line: 76
+Warning (12125): Using design file registerff.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RegisterFF File: C:/Projetos/MIPS_Completo_DBG/registerff.v Line: 10
+Info (12128): Elaborating entity "RegisterFF" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips|RegisterFF:pcreg" File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 49
+Warning (12125): Using design file adder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Adder File: C:/Projetos/MIPS_Completo_DBG/adder.v Line: 7
+Info (12128): Elaborating entity "Adder" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips|Adder:add_pc_default" File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 52
+Warning (12125): Using design file signextension.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SignExtension File: C:/Projetos/MIPS_Completo_DBG/signextension.v Line: 7
+Info (12128): Elaborating entity "SignExtension" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips|SignExtension:se_immediate" File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 55
+Warning (12125): Using design file shiftleft2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ShiftLeft2 File: C:/Projetos/MIPS_Completo_DBG/shiftleft2.v Line: 6
+Info (12128): Elaborating entity "ShiftLeft2" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips|ShiftLeft2:immsh" File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 58
+Warning (12125): Using design file mux2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: MUX2 File: C:/Projetos/MIPS_Completo_DBG/mux2.v Line: 6
+Info (12128): Elaborating entity "MUX2" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_pc_branch" File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 68
+Warning (12125): Using design file registerfile.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RegisterFile File: C:/Projetos/MIPS_Completo_DBG/registerfile.v Line: 8
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF" File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 81
+Info (12128): Elaborating entity "MUX2" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips|MUX2:mux_write_address" File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 87
+Warning (12125): Using design file alu.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU File: C:/Projetos/MIPS_Completo_DBG/alu.v Line: 10
+Info (12128): Elaborating entity "ALU" for hierarchy "MIPS:mips_computer|Datapath:Datapath_mips|ALU:alu_mips" File: C:/Projetos/MIPS_Completo_DBG/datapath.v Line: 107
+Warning (12125): Using design file instructionmemory.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: InstructionMemory File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 10
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:inst_mem" File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 62
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(48): Carregando Instrucoes p/ InsMem ==> ROM File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 48
+Warning (10850): Verilog HDL warning at instructionmemory.v(50): number of words (18) in memory file does not match the number of elements in the address range [0:63] File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 50
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(52): Instruction Memory 20020005 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 52
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(53): Instruction Memory 2003000c File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 53
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(54): Instruction Memory 2067fff7 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 54
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(55): Instruction Memory 00e22025 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 55
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(56): Instruction Memory 00642824 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 56
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(57): Instruction Memory 00a42820 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 57
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(58): Instruction Memory 10a7000a File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 58
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(59): Instruction Memory 0064202a File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 59
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(60): Instruction Memory 10800001 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 60
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(61): Instruction Memory 20050000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 61
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(62): Instruction Memory 00e2202a File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 62
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(63): Instruction Memory 00853820 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 63
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(64): Instruction Memory 00e23822 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 64
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(65): Instruction Memory ac670044 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 65
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(66): Instruction Memory 8c020050 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 66
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(67): Instruction Memory 08000011 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 67
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(68): Instruction Memory 20020001 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 68
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(69): Instruction Memory ac020054 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 69
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(70): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 70
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(71): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 71
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(72): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 72
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(73): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 73
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(74): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 74
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(75): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 75
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(76): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 76
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(77): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 77
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(78): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 78
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(79): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 79
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(80): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 80
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(81): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 81
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(82): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 82
+Info (10648): Verilog HDL Display System Task info at instructionmemory.v(83): Instruction Memory 00000000 File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 83
+Warning (10030): Net "ROM.data_a" at instructionmemory.v(13) has no driver or initial value, using a default initial value '0' File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 13
+Warning (10030): Net "ROM.waddr_a" at instructionmemory.v(13) has no driver or initial value, using a default initial value '0' File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 13
+Warning (10030): Net "ROM.we_a" at instructionmemory.v(13) has no driver or initial value, using a default initial value '0' File: C:/Projetos/MIPS_Completo_DBG/instructionmemory.v Line: 13
+Warning (12125): Using design file datamemory.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: DataMemory File: C:/Projetos/MIPS_Completo_DBG/datamemory.v Line: 8
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:data_mem" File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 70
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "MIPS:mips_computer|Datapath:Datapath_mips|RegisterFile:RF|Registradores" is uninferred due to asynchronous read logic File: C:/Projetos/MIPS_Completo_DBG/registerfile.v Line: 19
+    Info (276007): RAM logic "DataMemory:data_mem|RAM" is uninferred due to asynchronous read logic File: C:/Projetos/MIPS_Completo_DBG/datamemory.v Line: 14
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Projetos/MIPS_Completo_DBG/db/MIPS_Completo_DBG.ram0_InstructionMemory_d1968ec4.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "PC_DBG[0]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 16
+    Warning (13410): Pin "PC_DBG[1]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 16
+    Warning (13410): Pin "instr_DBG[19]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 17
+    Warning (13410): Pin "instr_DBG[20]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 17
+    Warning (13410): Pin "instr_DBG[24]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 17
+    Warning (13410): Pin "instr_DBG[25]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 17
+    Warning (13410): Pin "instr_DBG[30]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 17
+    Warning (13410): Pin "RF_Addr1_DBG[3]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 22
+    Warning (13410): Pin "RF_Addr1_DBG[4]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 22
+    Warning (13410): Pin "RF_Addr1_DBG[5]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 22
+    Warning (13410): Pin "RF_Addr2_DBG[3]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 23
+    Warning (13410): Pin "RF_Addr2_DBG[4]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 23
+    Warning (13410): Pin "RF_Addr2_DBG[5]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 23
+    Warning (13410): Pin "RF_Addr3_DBG[5]" is stuck at GND File: C:/Projetos/MIPS_Completo_DBG/mips_completo_dbg.v Line: 24
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 768 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4727 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 275 output pins
+    Info (21061): Implemented 4450 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Sun Nov 21 11:43:44 2021
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:47
+
+

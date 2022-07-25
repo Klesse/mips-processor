@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Nov 21 11:45:35 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : MIPS_Completo_DBG
+Top-level Entity Name : MIPS_Completo_DBG
+Family : Cyclone IV E
+Device : EP4CE15F23C6
+Timing Models : Final
+Total logic elements : 3,288 / 15,408 ( 21 % )
+    Total combinational functions : 2,146 / 15,408 ( 14 % )
+    Dedicated logic registers : 2,334 / 15,408 ( 15 % )
+Total registers : 2334
+Total pins : 277 / 344 ( 81 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

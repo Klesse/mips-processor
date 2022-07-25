@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 21 11:43:44 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : MIPS_Completo_DBG
+Top-level Entity Name : MIPS_Completo_DBG
+Family : Cyclone IV E
+Total logic elements : 4,386
+    Total combinational functions : 2,146
+    Dedicated logic registers : 2,334
+Total registers : 2334
+Total pins : 277
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

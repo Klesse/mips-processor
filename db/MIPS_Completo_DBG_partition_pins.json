@@ -1,0 +1,1061 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PC_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_DBG[31]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[15]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[16]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[17]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[18]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[21]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[22]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[23]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[26]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[27]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[28]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[29]",
+					"strict" : false
+				},
+				{
+					"name" : "instr_DBG[31]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[16]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[17]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[18]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[19]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[20]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[21]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[22]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[23]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[24]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[25]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[26]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[27]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[28]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[29]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[30]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_addrdata_DBG[31]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[16]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[17]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[18]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[19]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[20]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[21]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[22]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[23]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[24]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[25]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[26]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[27]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[28]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[29]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[30]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_readdata_DBG[31]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_memwrite_DBG",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[16]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[17]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[18]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[19]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[20]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[21]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[22]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[23]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[24]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[25]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[26]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[27]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[28]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[29]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[30]",
+					"strict" : false
+				},
+				{
+					"name" : "DM_writedata_DBG[31]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr1_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr1_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr1_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr2_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr2_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr2_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr3_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr3_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr3_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr3_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_Addr3_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[23]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[24]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[25]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[26]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[27]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[28]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[29]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[30]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead1_DBG[31]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[23]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[24]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[25]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[26]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[27]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[28]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[29]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[30]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataRead2_DBG[31]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[23]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[24]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[25]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[26]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[27]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[28]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[29]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[30]",
+					"strict" : false
+				},
+				{
+					"name" : "RF_DataWrite3_DBG[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
