@@ -1,6 +1,6 @@
 # MIPS Processor
 
-This was the final project for the computer architecture subject at college. It consists of a complete MIPS Processor made in verilog.
+This was the final project for the computer architecture class at college. It consists of a complete MIPS Processor made in verilog.
 
 # Overview 
 
