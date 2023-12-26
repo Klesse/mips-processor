@@ -8,4 +8,4 @@ This was the final project for the computer architecture class at college. It co
 
 # Author
 
-[Pedro Malandrin Klesse](www.github.com/Klesse)
+[Pedro Malandrin Klesse](https://www.github.com/Klesse)
